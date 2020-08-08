@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<div>
+<table>
+    {foreach $data as $value}
+<tr>
+    <td>{$value.id}</td>
+    <td>{$value.name}</td>
+    <td>{$value.password}</td>
+    <td>{$value.email}</td>
+    <td>{$value.create_time}</td>
+    <td><a href="edit?id={$value.id}"><span>修改</span></a></td>
+    <td><a href="delete?id={$value.id}"><span>删除</span></a></td>
+</tr>
+    {/foreach}
+</table>
+
+
+<div align="left ">{$page}</div>
+</div>
+</body>
+</html>
