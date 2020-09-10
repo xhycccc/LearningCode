@@ -1,0 +1,22 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> JSONP 实例 </title>
+</head>
+<body>
+	<div id="div1"></div>
+	<script type="text/javascript">
+		function jQuery123(result, methodName)
+		{
+			var html = '<ul>';
+			for(var i = 0; i < result.length; i++)
+			{
+				html += '<li>' + result[i] + '</li>';
+			}
+			html += '</ul>';
+			document.getElementById('div1').innerHTML = html;
+		}
+	</script>
+	<script type="text/javascript" src="http://localhost/jsonp/jsonp.php?jsoncallback=jQuery123"></script>
+</body>
+</html>
